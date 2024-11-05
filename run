@@ -1,0 +1,7 @@
+#!/usr/bin/sh
+nasm -f elf $1
+fname=$(echo $1 | cut -d. -f1)
+ld -m elf_i386 $fname.o -o $fname
+./$fname "${@:2}"
+rm $fname
+rm $fname.o

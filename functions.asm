@@ -126,3 +126,20 @@ atoi:
     pop     ecx             ; restore ecx from the value we pushed onto the stack at the start
     pop     ebx             ; restore ebx from the value we pushed onto the stack at the start
     ret
+
+putchar:
+    push eax
+    push ebx
+    push ecx
+    push edx
+    mov ecx, eax
+    mov eax, 4
+    mov ebx, 1
+    mov edx, 1
+    int 0x80
+
+    pop edx
+    pop ecx
+    pop ebx
+    pop eax
+    ret

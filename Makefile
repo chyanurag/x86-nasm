@@ -1,7 +1,7 @@
-all: main.asm
-	nasm -felf main.asm
-	ld -m elf_i386 main.o -o main
+all: enigma.asm
+	nasm -felf enigma.asm
+	ld -m elf_i386 enigma.o -o enigma
 
 clean:
-	rm -f main.o 
-	rm -f main
+	rm -f enigma.o 
+	rm -f enigma

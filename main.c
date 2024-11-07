@@ -46,23 +46,14 @@ char getLetterFromShift(char shift, Rotor rotor) {
 
 char encryptLetter(char letter, Rotor reflector, Rotor leftRotor, Rotor middleRotor, Rotor rightRotor, Rotor plugboard) {
 	letter = getLetterShift(letter,plugboard);
-    printf("%c\n", letter);
 	letter = getLetterShift(letter,rightRotor);
-    printf("%c\n", letter);
 	letter = getLetterShift(letter,middleRotor);
-    printf("%c\n", letter);
 	letter = getLetterShift(letter,leftRotor);
-    printf("%c\n", letter);
 	letter = getLetterShift(letter,reflector);
-    printf("%c\n", letter);
 	letter = getLetterFromShift(letter,leftRotor);
-    printf("%c\n", letter);
 	letter = getLetterFromShift(letter,middleRotor);
-    printf("%c\n", letter);
 	letter = getLetterFromShift(letter,rightRotor);
-    printf("%c\n", letter);
 	letter = getLetterFromShift(letter,plugboard);
-    printf("%c\n", letter);
 	return letter;
 }
 

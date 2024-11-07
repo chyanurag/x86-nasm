@@ -128,18 +128,18 @@ atoi:
     ret
 
 putchar:
-    push eax
     push ebx
     push ecx
     push edx
-    mov ecx, eax
+    push eax
+    mov ecx, esp
     mov eax, 4
     mov ebx, 1
     mov edx, 1
     int 0x80
 
+    pop eax
     pop edx
     pop ecx
     pop ebx
-    pop eax
     ret
